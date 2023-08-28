@@ -7,9 +7,9 @@ import java.sql.*;
 //update the password System.getenv("PS_SQL_PASSWORD");
 public class Dbcreator {
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/inventorymanager";
-    private static final String DB_USER = "postgres";
-    private static final String DB_PASSWORD = "root";
-
+    private static final String DB_USER = System.getenv("PS_SQL_USER");
+    private static final String DB_PASSWORD = System.getenv("PS_SQL_PASSWORD");
+    
     public static void main(String[] args) {
         try {
             Class.forName("org.postgresql.Driver");
