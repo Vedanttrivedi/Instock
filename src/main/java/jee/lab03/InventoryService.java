@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class InventoryService {
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/inventorymanager";
-    private static final String DB_USER = "postgres";
-    private static final String DB_PASSWORD = "root";
+    private static final String DB_USER = System.getenv("PS_SQL_USER");
+    private static final String DB_PASSWORD = System.getenv("PS_SQL_PASSWORD");
     private Connection connection;
 
     public InventoryService() throws SQLException {
